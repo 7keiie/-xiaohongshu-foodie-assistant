@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#fff7f1" />
   <title>探店督更局</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="icon-192.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23fff1e8%22/%3E%3Ctext x=%2250%22 y=%2266%22 font-size=%2258%22 text-anchor=%22middle%22%3E🍜%3C/text%3E%3C/svg%3E" />
+  <style>
+:root{
+  --bg:#fff8f3;--card:#fffdf9;--ink:#201b18;--muted:#8d8178;--line:#eadfd6;
+  --accent:#ff4f63;--accent-soft:#ffe6e7;--orange:#ff8a3d;--shadow:0 18px 50px rgba(82,52,35,.09);
+}
+*{box-sizing:border-box}html{background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Noto Sans SC",sans-serif;color:var(--ink)}body{margin:0;background:linear-gradient(180deg,#fff5ee 0,#fffaf6 35%,#fff8f3 100%);min-height:100vh}.app-shell{max-width:560px;margin:0 auto;min-height:100vh;padding:env(safe-area-inset-top) 18px calc(94px + env(safe-area-inset-bottom))}.topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 2px 16px}.eyebrow{font-size:10px;letter-spacing:.16em;font-weight:800;color:#a19084;margin:0 0 5px}.topbar h1,.section-head h2,.sheet h2,.mini-dialog h2{margin:0;font-size:25px;letter-spacing:-.03em}.icon-btn{border:0;background:#201b18;color:#fff;width:44px;height:44px;border-radius:16px;font-size:26px;box-shadow:var(--shadow)}.hero-card{background:#211b18;color:white;border-radius:26px;padding:21px;display:flex;justify-content:space-between;gap:18px;align-items:end;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-card:after{content:"";position:absolute;width:180px;height:180px;background:radial-gradient(circle,#ff704d55,transparent 68%);right:-55px;top:-80px}.pill{display:inline-block;background:#ffffff18;border:1px solid #ffffff26;border-radius:999px;padding:5px 9px;font-size:11px}.progress-line{display:flex;align-items:baseline;gap:4px;margin-top:10px}.progress-line strong{font-size:34px}.progress-line span{opacity:.4}.progress-line small{opacity:.68}.hero-copy p{font-size:12px;opacity:.67;margin:8px 0 0;line-height:1.45}.dice-btn{z-index:1;border:0;background:#fff;color:#211b18;border-radius:18px;padding:12px 13px;font-weight:800;min-width:104px}.dice-btn span{display:block;font-size:23px;margin-bottom:3px}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:11px 0 24px}.stat{background:#ffffffb8;border:1px solid #efe4db;border-radius:18px;padding:13px}.stat span{display:block;font-size:11px;color:var(--muted)}.stat strong{display:block;font-size:20px;margin-top:4px}.section-head{display:flex;align-items:end;justify-content:space-between;margin:18px 2px 12px}.section-head.compact{margin-top:6px}.text-btn{border:0;background:none;color:#a86654;font-weight:800;padding:6px}.queue{display:grid;gap:11px}.queue-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:12px;display:grid;grid-template-columns:82px 1fr;gap:13px;box-shadow:0 8px 25px rgba(80,51,32,.04);position:relative}.queue-card.urgent{border-color:#ffc6ca}.thumb{width:82px;height:100%;min-height:96px;border-radius:16px;object-fit:cover;background:linear-gradient(135deg,#f5d9c9,#f7bdbb)}.thumb-placeholder{display:flex;align-items:center;justify-content:center;font-size:30px}.card-top{display:flex;justify-content:space-between;gap:8px}.card-top h3{font-size:18px;margin:1px 0 4px}.age-badge{font-size:10px;font-weight:800;padding:5px 8px;border-radius:999px;background:#f1ebe6;height:max-content;white-space:nowrap}.age-badge.red{background:#ffe2e4;color:#d6384b}.meta{font-size:11px;color:var(--muted);line-height:1.5}.note{font-size:12px;margin:7px 0;color:#514841;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.completion{height:5px;background:#f1ebe7;border-radius:99px;overflow:hidden;margin:8px 0}.completion i{display:block;height:100%;background:linear-gradient(90deg,#ff8d55,#ff5266);border-radius:99px}.card-actions{display:flex;gap:7px}.small-btn{border:0;border-radius:12px;padding:8px 10px;font-size:11px;font-weight:800}.small-btn.primary{background:#241d19;color:#fff}.small-btn.ghost{background:#f6eee8;color:#6e5e53}.empty-state{text-align:center;padding:44px 30px;color:var(--muted)}.empty-state h3{color:var(--ink);margin:8px}.empty-emoji{font-size:46px}.primary-btn,.secondary-btn,.danger-btn{border:0;border-radius:16px;padding:14px 16px;font-weight:800;font-size:14px}.primary-btn{background:#211b18;color:#fff}.secondary-btn{background:#f3e9e2;color:#493b32}.danger-btn{background:#fff1f2;color:#c94555;margin-top:8px}.full{width:100%}.hidden{display:none!important}.tabbar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),536px);background:#211b18eF;backdrop-filter:blur(18px);display:grid;grid-template-columns:repeat(3,1fr);padding:8px;border-radius:22px;box-shadow:0 15px 45px rgba(32,27,24,.22);z-index:20}.tab{border:0;background:transparent;color:#a99e97;border-radius:15px;padding:8px;font-weight:800;font-size:11px}.tab span{display:block;font-size:18px;margin-bottom:2px}.tab.active{background:#fff;color:#211b18}.sheet,.mini-dialog{border:0;padding:0;background:var(--bg);color:var(--ink);box-shadow:0 -20px 60px rgba(39,27,20,.2)}.sheet{width:min(100%,560px);max-height:92vh;margin:auto auto 0;border-radius:28px 28px 0 0}.sheet::backdrop,.mini-dialog::backdrop{background:#20191466;backdrop-filter:blur(3px)}.sheet form,.detail-sheet{padding:12px 18px 30px}.detail-sheet{padding-bottom:34px;overflow:auto}.sheet-handle{width:44px;height:5px;border-radius:99px;background:#d9cbc1;margin:4px auto 13px}.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.close-btn{border:0;background:#eee4dd;border-radius:50%;width:34px;height:34px;font-size:20px;color:#5a4d44}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field span{font-size:12px;font-weight:800;color:#5c5048}.field input,.field textarea,.field select,.draft-card textarea{width:100%;border:1px solid #e7dbd2;background:#fffdfa;border-radius:13px;padding:12px;font:inherit;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus,.draft-card textarea:focus{border-color:#d7a18f;box-shadow:0 0 0 3px #ffece5}.field small{color:#9b8c82;font-size:10px}.photo-strip{display:flex;gap:8px;overflow:auto;padding:2px 0 12px}.photo-strip img{width:112px;height:112px;border-radius:17px;object-fit:cover;flex:0 0 auto}.detail-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.meta-chip{font-size:11px;background:#efe6df;border-radius:999px;padding:7px 9px}.draft-card{background:#fffdfa;border:1px solid #e9ddd4;border-radius:20px;padding:13px;margin-bottom:10px}.draft-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.title-choices{display:grid;gap:7px}.title-option{border:1px solid #eee1d8;background:#fff;border-radius:13px;text-align:left;padding:10px 11px;font-size:13px}.title-option.selected{border-color:#221b18;background:#fff5ed}.draft-card textarea{resize:vertical;line-height:1.65}.detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail-actions .primary-btn{grid-column:1/-1}.mini-dialog{width:min(calc(100% - 34px),460px);border-radius:24px;padding:18px}.mini-dialog form{display:grid;gap:13px}.settings-card{background:#fffdfa;border:1px solid var(--line);border-radius:22px;padding:18px}.settings-card>label{font-weight:800}.settings-card input[type=range]{width:100%;margin:14px 0 18px}.setting-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eee3db;padding:14px 0}.setting-row strong{display:block;font-size:13px}.setting-row small{display:block;color:var(--muted);margin-top:3px}.switch{appearance:none;width:46px;height:26px;border-radius:99px;background:#ded4cd;position:relative}.switch:checked{background:#211b18}.switch:after{content:"";position:absolute;width:20px;height:20px;border-radius:50%;background:white;top:3px;left:3px;transition:.2s}.switch:checked:after{left:23px}.published-card{opacity:.86}.toast{position:fixed;left:50%;bottom:102px;transform:translate(-50%,20px);background:#211b18;color:white;padding:11px 15px;border-radius:999px;font-size:12px;opacity:0;pointer-events:none;transition:.22s;z-index:99;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:380px){.hero-card{align-items:center}.hero-copy p{display:none}.stats-grid{gap:6px}.stat{padding:11px}.queue-card{grid-template-columns:72px 1fr}.thumb{width:72px}.detail-actions{grid-template-columns:1fr}}
+
+  </style>
 </head>
 <body>
   <div class="app-shell">
@@ -135,6 +142,209 @@
     </form>
   </dialog>
 
-  <script src="app.js"></script>
+  <script>
+const DB_NAME = 'food-note-db';
+const STORE = 'visits';
+let db;
+let currentId = null;
+let sortMode = 'urgent';
+
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => [...document.querySelectorAll(s)];
+const todayStr = () => new Date().toISOString().slice(0,10);
+const dayDiff = (d) => Math.max(0, Math.floor((new Date(todayStr()) - new Date(d)) / 86400000));
+const esc = (s='') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+function openDB(){
+  return new Promise((resolve,reject)=>{
+    const req=indexedDB.open(DB_NAME,1);
+    req.onupgradeneeded=()=>{ const d=req.result; if(!d.objectStoreNames.contains(STORE)) d.createObjectStore(STORE,{keyPath:'id'}); };
+    req.onsuccess=()=>{db=req.result;resolve(db)}; req.onerror=()=>reject(req.error);
+  });
+}
+function tx(mode='readonly'){return db.transaction(STORE,mode).objectStore(STORE)}
+function getAll(){return new Promise((r,j)=>{const q=tx().getAll();q.onsuccess=()=>r(q.result);q.onerror=()=>j(q.error)})}
+function put(v){return new Promise((r,j)=>{const q=tx('readwrite').put(v);q.onsuccess=()=>r(v);q.onerror=()=>j(q.error)})}
+function del(id){return new Promise((r,j)=>{const q=tx('readwrite').delete(id);q.onsuccess=()=>r();q.onerror=()=>j(q.error)})}
+function clearAll(){return new Promise((r,j)=>{const q=tx('readwrite').clear();q.onsuccess=()=>r();q.onerror=()=>j(q.error)})}
+
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+
+async function compressImage(file){
+  return new Promise((resolve)=>{
+    const fr=new FileReader();
+    fr.onload=()=>{const img=new Image();img.onload=()=>{
+      const max=1000, ratio=Math.min(1,max/Math.max(img.width,img.height));
+      const c=document.createElement('canvas');c.width=Math.round(img.width*ratio);c.height=Math.round(img.height*ratio);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      resolve(c.toDataURL('image/jpeg',0.68));
+    };img.src=fr.result};fr.readAsDataURL(file)
+  })
+}
+
+function completeness(v){
+  const checks=[v.name,v.date,v.price,v.location,v.dishes,v.rating,v.note,(v.photos||[]).length];
+  return Math.round(checks.filter(Boolean).length/checks.length*100);
+}
+
+function urgency(v){
+  const days=dayDiff(v.date); const missing=100-completeness(v);
+  return days*8 + missing*.35 + ((v.photos||[]).length?10:0);
+}
+
+function ageLabel(v){
+  const d=dayDiff(v.date); if(d===0)return '今天'; if(d===1)return '昨天'; return `拖了 ${d} 天`;
+}
+
+function cardHTML(v,published=false){
+  const d=dayDiff(v.date), urgent=d>=3, comp=completeness(v);
+  const thumb=(v.photos&&v.photos[0])?`<img class="thumb" src="${v.photos[0]}" alt="">`:`<div class="thumb thumb-placeholder">🍽️</div>`;
+  return `<article class="queue-card ${urgent&&!published?'urgent':''} ${published?'published-card':''}" data-id="${v.id}">
+    ${thumb}<div>
+      <div class="card-top"><div><h3>${esc(v.name)}</h3><div class="meta">${esc(v.location||'地点未记')} · ${esc(v.price||'人均未记')}</div></div>
+      <span class="age-badge ${urgent&&!published?'red':''}">${published?'已发布':ageLabel(v)}</span></div>
+      <p class="note">${esc(v.note||v.dishes||'还没写感受，点进去补两句。')}</p>
+      ${published?'':`<div class="completion"><i style="width:${comp}%"></i></div><div class="meta">素材完整度 ${comp}%</div>`}
+      <div class="card-actions" style="margin-top:8px">
+        <button class="small-btn primary" data-open="${v.id}">${published?'查看':'7 分钟写完'}</button>
+        ${published?`<button class="small-btn ghost" data-delete="${v.id}">删除</button>`:`<button class="small-btn ghost" data-remind="${v.id}">明天催我</button>`}
+      </div>
+    </div></article>`;
+}
+
+async function render(){
+  const all=await getAll();
+  const pending=all.filter(v=>!v.publishedAt);
+  const published=all.filter(v=>v.publishedAt).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
+  if(sortMode==='urgent') pending.sort((a,b)=>urgency(b)-urgency(a)); else pending.sort((a,b)=>b.date.localeCompare(a.date));
+  $('#queue').innerHTML=pending.map(v=>cardHTML(v)).join('');
+  $('#publishedList').innerHTML=published.length?published.map(v=>cardHTML(v,true)).join(''):'<div class="empty-state"><div class="empty-emoji">📮</div><h3>还没有发布记录</h3></div>';
+  $('#emptyState').classList.toggle('hidden',pending.length>0);
+  $('#queue').classList.toggle('hidden',pending.length===0);
+  $('#pendingCount').textContent=pending.length;
+  $('#oldestDays').textContent=(pending.length?Math.max(...pending.map(v=>dayDiff(v.date))):0)+'天';
+  const now=new Date(), ym=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+  $('#monthDone').textContent=published.filter(v=>v.publishedAt.startsWith(ym)).length;
+  const monday=new Date(); const dow=(monday.getDay()+6)%7; monday.setDate(monday.getDate()-dow);monday.setHours(0,0,0,0);
+  const weekDone=published.filter(v=>new Date(v.publishedAt)>=monday).length;
+  $('#weekDone').textContent=weekDone;
+  const goal=Number(localStorage.getItem('weeklyGoal')||3);$('#weekGoal').textContent=goal;$('#goalValue').textContent=goal;$('#goalRange').value=goal;
+  $('#heroHint').textContent=weekDone>=goal?'本周目标完成，下一篇可以轻松一点。':pending.length?`还差 ${Math.max(0,goal-weekDone)} 篇达成本周目标。`:'先把吃过的店放进来，剩下的交给它催你。';
+  bindDynamic();
+}
+
+function bindDynamic(){
+  $$('[data-open]').forEach(b=>b.onclick=()=>openDetail(b.dataset.open));
+  $$('[data-remind]').forEach(b=>b.onclick=()=>makeReminderById(b.dataset.remind,1));
+  $$('[data-delete]').forEach(b=>b.onclick=async()=>{if(confirm('删除这条记录？')){await del(b.dataset.delete);render()}});
+}
+
+function buildTitles(v,offset=0){
+  const area=v.location?`${v.location} `:''; const price=v.price?`${v.price} `:''; const name=v.name;
+  const banks=[
+    [`${area}${name}｜这顿到底值不值得吃？`,`${price}吃${name}，我会不会再来`,`最近吃到一顿比预期更好的：${name}`],
+    [`不滤镜探店｜${name}吃完后的真实感受`,`${area}新发现：${name}我最想夸的是这点`,`吃完${name}，先说结论：${v.revisit||'有亮点也有雷点'}`],
+    [`${name}避雷/种草一次讲清`,`${price}${name}，点这些比较稳`,`如果第一次去${name}，我会这样点`]
+  ];
+  return banks[offset%banks.length];
+}
+
+function splitDishes(s=''){return s.split(/[，,、\n]/).map(x=>x.trim()).filter(Boolean)}
+function makeDraft(v,title){
+  const dishes=splitDishes(v.dishes);
+  const lines=[];
+  lines.push(title||buildTitles(v)[0]);
+  lines.push('');
+  lines.push(`📍 ${v.name}${v.location?`｜${v.location}`:''}`);
+  if(v.price) lines.push(`💰 人均：${v.price}`);
+  if(v.rating) lines.push(`⭐ 整体：${v.rating}/10`);
+  lines.push('');
+  lines.push(v.note?`先说感受：${v.note}`:'先说感受：整体有亮点，但我会更看重实际味道和性价比。');
+  if(dishes.length){lines.push('');lines.push('这次点了：');dishes.slice(0,6).forEach((d,i)=>lines.push(`・${d}${i===0?' —— 最值得先试':''}`))}
+  if(v.cons){lines.push('');lines.push(`需要注意：${v.cons}。`)}
+  if(v.revisit){lines.push('');lines.push(`回购：${v.revisit}。`)}
+  lines.push('');
+  const tags=['#香港探店','#探店日记']; if(v.location)tags.push('#'+v.location.replace(/\s/g,'')); tags.push('#美食分享');
+  lines.push(tags.join(' '));
+  return lines.join('\n');
+}
+
+async function openDetail(id){
+  const all=await getAll(), v=all.find(x=>x.id===id); if(!v)return; currentId=id;
+  $('#detailTitle').textContent=v.name;
+  $('#detailPhotos').innerHTML=(v.photos||[]).map(p=>`<img src="${p}" alt="">`).join('');
+  $('#detailMeta').innerHTML=[v.date,v.location,v.price,v.rating?`${v.rating}/10`:null,v.revisit?`回购：${v.revisit}`:null].filter(Boolean).map(x=>`<span class="meta-chip">${esc(x)}</span>`).join('');
+  let offset=Number(v.titleOffset||0); renderTitles(v,offset);
+  $('#draftText').value=v.draft||makeDraft(v,buildTitles(v,offset)[0]);
+  $('#regenBtn').onclick=async()=>{offset++;v.titleOffset=offset;await put(v);renderTitles(v,offset)};
+  $('#detailDialog').showModal();
+}
+
+function renderTitles(v,offset){
+  const titles=buildTitles(v,offset); $('#titleChoices').innerHTML=titles.map((t,i)=>`<button class="title-option ${i===0?'selected':''}" data-title="${esc(t)}">${esc(t)}</button>`).join('');
+  $$('.title-option').forEach(btn=>btn.onclick=async()=>{
+    $$('.title-option').forEach(x=>x.classList.remove('selected'));btn.classList.add('selected');
+    $('#draftText').value=makeDraft(v,btn.dataset.title);
+    v.draft=$('#draftText').value;await put(v);
+  });
+}
+
+async function saveCurrentDraft(){if(!currentId)return;const all=await getAll(),v=all.find(x=>x.id===currentId);if(v){v.draft=$('#draftText').value;await put(v)}}
+
+async function makeReminderById(id,days){
+  const all=await getAll(),v=all.find(x=>x.id===id); if(!v)return;
+  const dt=new Date();dt.setDate(dt.getDate()+days);dt.setHours(19,0,0,0);
+  const fmt=d=>d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
+  const end=new Date(dt.getTime()+30*60000);
+  const ics=`BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Food Note Studio//CN\r\nBEGIN:VEVENT\r\nDTSTART:${fmt(dt)}\r\nDTEND:${fmt(end)}\r\nSUMMARY:更新小红书：${v.name}\r\nDESCRIPTION:你还有一篇探店没发：${v.name}。打开探店督更局，7分钟写完。\r\nEND:VEVENT\r\nEND:VCALENDAR`;
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download=`小红书提醒-${v.name}.ics`;a.click();URL.revokeObjectURL(a.href);toast('已生成日历提醒');
+}
+
+function exportData(data){
+  const cleaned=data.map(({photos,...rest})=>({...rest,photoCount:(photos||[]).length}));
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(cleaned,null,2)],{type:'application/json'}));a.download='探店督更数据.json';a.click();URL.revokeObjectURL(a.href)
+}
+
+async function init(){
+  await openDB(); $('#visitDate').value=todayStr();$('#publishDate').value=todayStr();
+  $('#goalRange').value=localStorage.getItem('weeklyGoal')||3;
+  await render();
+
+}
+
+$('#addBtnTop').onclick=$('#addBtnEmpty').onclick=()=>{$('#entryForm').reset();$('#visitDate').value=todayStr();$('#entryDialog').showModal()};
+$$('[data-close]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.close).close());
+
+$('#entryForm').onsubmit=async(e)=>{
+  e.preventDefault();
+  const files=[...$('#photos').files].slice(0,6); $('#photoHint').textContent=files.length?'正在压缩照片…':'可稍后再补照片。';
+  const photos=[]; for(const f of files) photos.push(await compressImage(f));
+  const v={id:crypto.randomUUID(),createdAt:new Date().toISOString(),name:$('#placeName').value.trim(),date:$('#visitDate').value,price:$('#price').value.trim(),location:$('#location').value.trim(),dishes:$('#dishes').value.trim(),rating:$('#rating').value,revisit:$('#revisit').value,note:$('#note').value.trim(),cons:$('#cons').value.trim(),photos,publishedAt:null,draft:''};
+  v.draft=makeDraft(v,buildTitles(v)[0]); await put(v);$('#entryDialog').close();toast('已放进欠更队列');await render();
+};
+
+$('#randomBtn').onclick=async()=>{const p=(await getAll()).filter(v=>!v.publishedAt);if(!p.length)return toast('现在没有欠稿 🎉');const weighted=[...p].sort((a,b)=>urgency(b)-urgency(a));const pool=weighted.slice(0,Math.min(3,weighted.length));const pick=pool[Math.floor(Math.random()*pool.length)];openDetail(pick.id);toast(`今天就发「${pick.name}」`)};
+$('#sortBtn').onclick=()=>{sortMode=sortMode==='urgent'?'newest':'urgent';$('#sortBtn').textContent=sortMode==='urgent'?'按最急':'按最新';render()};
+
+$('#copyDraftBtn').onclick=async()=>{await saveCurrentDraft();await navigator.clipboard.writeText($('#draftText').value);toast('正文已复制')};
+$('#copyPromptBtn').onclick=async()=>{
+  await saveCurrentDraft(); const all=await getAll(),v=all.find(x=>x.id===currentId);
+  const prompt=`请把下面这篇探店笔记精修成适合小红书发布的中文文案。要求：真实、克制、不使用“绝绝子/封神/天花板”等夸张词；保留具体价格、菜名、优缺点和回购意愿；短句、好读；给3个不同标题；不要编造我没提供的信息。\n\n店名：${v.name}\n地区：${v.location||'未提供'}\n人均：${v.price||'未提供'}\n评分：${v.rating||'未评分'}\n菜品：${v.dishes||'未提供'}\n感受：${v.note||'未提供'}\n雷点：${v.cons||'未提供'}\n回购：${v.revisit||'未提供'}\n\n当前草稿：\n${$('#draftText').value}`;
+  await navigator.clipboard.writeText(prompt);toast('AI 精修提示词已复制');
+};
+$('#calendarBtn').onclick=()=>makeReminderById(currentId,1);
+$('#publishBtn').onclick=async()=>{await saveCurrentDraft();$('#publishDate').value=todayStr();$('#postUrl').value='';$('#publishDialog').showModal()};
+$('#publishForm').onsubmit=async(e)=>{e.preventDefault();const all=await getAll(),v=all.find(x=>x.id===currentId);v.publishedAt=$('#publishDate').value;v.postUrl=$('#postUrl').value.trim();await put(v);$('#publishDialog').close();$('#detailDialog').close();toast('完成一篇，打卡成功 🎉');render()};
+
+$('#goalRange').oninput=e=>{$('#goalValue').textContent=e.target.value;localStorage.setItem('weeklyGoal',e.target.value);$('#weekGoal').textContent=e.target.value};
+$('#exportBtn').onclick=async()=>exportData(await getAll());
+$('#clearBtn').onclick=async()=>{if(confirm('确定清空所有本机探店记录？这个操作不能撤销。')){await clearAll();render();toast('已清空')}};
+
+$$('.tab').forEach(t=>t.onclick=()=>{ $$('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');const tab=t.dataset.tab;$('#queue').classList.toggle('hidden',tab!=='pending');$('#emptyState').classList.toggle('hidden',tab!=='pending'||$('#pendingCount').textContent!=='0');$('#publishedSection').classList.toggle('hidden',tab!=='published');$('#settingsSection').classList.toggle('hidden',tab!=='settings');$$('main > .hero-card, main > .stats-grid, main > .section-head:not(.compact)').forEach(el=>el.classList.toggle('hidden',tab!=='pending')); });
+
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')saveCurrentDraft()});
+init();
+
+  </script>
 </body>
 </html>
