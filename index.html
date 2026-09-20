@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#fff7f1" />
+  <title>探店督更局</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">FOOD NOTE STUDIO</p>
+        <h1>探店督更局</h1>
+      </div>
+      <button id="addBtnTop" class="icon-btn" aria-label="新增探店">＋</button>
+    </header>
+
+    <main>
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="pill">本周进度</span>
+          <div class="progress-line"><strong id="weekDone">0</strong><span>/</span><strong id="weekGoal">3</strong><small> 篇已发布</small></div>
+          <p id="heroHint">先把吃过的店放进来，剩下的交给它催你。</p>
+        </div>
+        <button id="randomBtn" class="dice-btn"><span>🎲</span> 今天发哪篇</button>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat"><span>待更新</span><strong id="pendingCount">0</strong></div>
+        <div class="stat"><span>已拖最久</span><strong id="oldestDays">0天</strong></div>
+        <div class="stat"><span>本月已发</span><strong id="monthDone">0</strong></div>
+      </section>
+
+      <section class="section-head">
+        <div>
+          <p class="eyebrow">UPDATE QUEUE</p>
+          <h2>欠更队列</h2>
+        </div>
+        <button id="sortBtn" class="text-btn">按最急</button>
+      </section>
+
+      <section id="queue" class="queue"></section>
+      <section id="emptyState" class="empty-state hidden">
+        <div class="empty-emoji">🍜</div>
+        <h3>现在还没有欠稿</h3>
+        <p>下次探店后，花 30 秒记下来。越早记，越不容易忘。</p>
+        <button id="addBtnEmpty" class="primary-btn">＋ 新增一次探店</button>
+      </section>
+
+      <section id="publishedSection" class="published-section hidden">
+        <div class="section-head compact">
+          <div><p class="eyebrow">ARCHIVE</p><h2>已发布</h2></div>
+        </div>
+        <div id="publishedList" class="queue"></div>
+      </section>
+
+      <section id="settingsSection" class="settings-section hidden">
+        <div class="section-head compact"><div><p class="eyebrow">SETTINGS</p><h2>督更设置</h2></div></div>
+        <div class="settings-card">
+          <label>每周目标 <span id="goalValue">3</span> 篇</label>
+          <input id="goalRange" type="range" min="1" max="7" value="3" />
+          <div class="setting-row">
+            <div><strong>72 小时催更</strong><small>超过 3 天自动标红</small></div>
+            <input id="urgentToggle" class="switch" type="checkbox" checked />
+          </div>
+          <div class="setting-row">
+            <div><strong>7 天进入欠稿区</strong><small>越拖越靠前</small></div>
+            <input id="overdueToggle" class="switch" type="checkbox" checked />
+          </div>
+          <button id="exportBtn" class="secondary-btn full">导出全部数据</button>
+          <button id="clearBtn" class="danger-btn full">清空本机数据</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <button class="tab active" data-tab="pending"><span>◉</span>待更</button>
+      <button class="tab" data-tab="published"><span>✓</span>已发布</button>
+      <button class="tab" data-tab="settings"><span>⚙</span>设置</button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <dialog id="entryDialog" class="sheet">
+    <form id="entryForm" method="dialog">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head"><div><p class="eyebrow">NEW VISIT</p><h2>记下这次探店</h2></div><button type="button" class="close-btn" data-close="entryDialog">×</button></div>
+      <div class="form-grid">
+        <label class="field full"><span>店名 *</span><input id="placeName" required placeholder="例如：火夫" /></label>
+        <label class="field"><span>探店日期 *</span><input id="visitDate" type="date" required /></label>
+        <label class="field"><span>人均</span><input id="price" placeholder="例如：HK$85" /></label>
+        <label class="field full"><span>地区 / 地址</span><input id="location" placeholder="例如：尖沙咀 / 铜锣湾" /></label>
+        <label class="field full"><span>吃了什么</span><textarea id="dishes" rows="2" placeholder="一行一个菜，或者用逗号隔开"></textarea></label>
+        <label class="field"><span>整体评分</span><select id="rating"><option value="">未评分</option><option>10</option><option>9</option><option>8</option><option>7</option><option>6</option><option>5</option></select></label>
+        <label class="field"><span>会回购吗</span><select id="revisit"><option value="">还没想好</option><option>会</option><option>看情况</option><option>不会</option></select></label>
+        <label class="field full"><span>最想记住的一句话</span><textarea id="note" rows="3" placeholder="例如：汤底比预期好，但小食一般。"></textarea></label>
+        <label class="field full"><span>雷点 / 缺点</span><input id="cons" placeholder="例如：排队久、份量偏小" /></label>
+        <label class="field full"><span>照片（最多 6 张）</span><input id="photos" type="file" accept="image/*" multiple /><small id="photoHint">会自动压缩后保存在本机浏览器。</small></label>
+      </div>
+      <button class="primary-btn full" type="submit">放进待更队列</button>
+    </form>
+  </dialog>
+
+  <dialog id="detailDialog" class="sheet detail-sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-head"><div><p class="eyebrow">DRAFT DESK</p><h2 id="detailTitle">探店草稿</h2></div><button type="button" class="close-btn" data-close="detailDialog">×</button></div>
+    <div id="detailPhotos" class="photo-strip"></div>
+    <div id="detailMeta" class="detail-meta"></div>
+    <div class="draft-card">
+      <div class="draft-head"><strong>标题候选</strong><button id="regenBtn" class="text-btn">换一组</button></div>
+      <div id="titleChoices" class="title-choices"></div>
+    </div>
+    <div class="draft-card">
+      <div class="draft-head"><strong>正文初稿</strong><button id="copyDraftBtn" class="text-btn">复制</button></div>
+      <textarea id="draftText" rows="13"></textarea>
+    </div>
+    <div class="detail-actions">
+      <button id="copyPromptBtn" class="secondary-btn">复制 AI 精修提示词</button>
+      <button id="calendarBtn" class="secondary-btn">加入提醒</button>
+      <button id="publishBtn" class="primary-btn">✓ 标记已发布</button>
+    </div>
+  </dialog>
+
+  <dialog id="publishDialog" class="mini-dialog">
+    <form id="publishForm" method="dialog">
+      <div class="sheet-head"><div><p class="eyebrow">PUBLISHED</p><h2>记录发布</h2></div><button type="button" class="close-btn" data-close="publishDialog">×</button></div>
+      <label class="field full"><span>发布时间</span><input id="publishDate" type="date" required /></label>
+      <label class="field full"><span>小红书链接（可选）</span><input id="postUrl" placeholder="https://www.xiaohongshu.com/..." /></label>
+      <button class="primary-btn full" type="submit">完成打卡 🎉</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
